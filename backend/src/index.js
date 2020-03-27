@@ -1,14 +1,14 @@
-const express = require('express'); 
+const express = require('express');
 const cors = require('cors');
-const routes = require('./routes'); 
+const routes = require('./routes');
 
 const app = express();
 
-app.use(core())
+app.use(cors());
 app.use(express.json()); // Comando para o app entender formato JSON
 app.use(routes); // app usa 'ROTAS' que foram importadas para o arquivo através do require('./routes')
 
-app.listen(3333);
+app.listen(3331);
 
 
 
@@ -27,7 +27,7 @@ app.listen(3333);
 
 /**
  * Tipos de parâmetros:
- * 
+ *
  * Query Params: Parâmetros nomeados enviados na rota após "?" (Filtros, paginação)
  * Route Params: Parâmetros utilizados para identificar recursos
  * Request Body: Corpo da requisição, utilizado para criar ou alterar recursos
@@ -35,7 +35,7 @@ app.listen(3333);
 
 /**
  * Tipos de Banco de Dados:
- * 
+ *
  * SQL: MySQL, SQLite, PostgreSQL, Oracle, Microsoft SQL Server, etc.
  * NoSQL: MongoDB, CouchDB, etc.
  */
